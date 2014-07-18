@@ -1,0 +1,4 @@
+*.nw
+release/
+.project
+.settings
