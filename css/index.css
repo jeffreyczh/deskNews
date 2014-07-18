@@ -1,0 +1,75 @@
+body
+{
+	-webkit-app-region: drag;
+}
+
+div[ng-controller=weatherCtrl] img
+{
+	vertical-align:middle;
+	width: 30px;
+}
+div[ng-controller=weatherCtrl], div[ng-controller=dateCtrl]
+{
+	display: inline;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+div[ng-controller=dateCtrl]
+{
+	padding-top: 5px;
+	float: right;
+}
+hr
+{
+	margin-top: -6;
+	width: 100%;
+}
+div[ng-controller=currencyCtrl] span
+{
+	font-size: 0.85em;
+	font-family: 'Arial';
+}
+div[ng-controller=currencyCtrl] span:nth-child(2)
+{
+	float: right;
+}
+div[ng-controller=currencyCtrl] span:nth-child(2) img
+{
+	height: 10px;
+	padding-left: 3px;
+}
+h1
+{
+	font-size: 0.95em;
+	font-family: 'Arial';
+}
+
+
+div[ng-controller=topNewsCtrl]
+{
+	height: 1.1em;
+	overflow: hidden;
+}
+
+.newsTitle
+{
+	-webkit-app-region: no-drag;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.newsTitle:hover
+{
+	color: blue;
+	cursor: pointer;
+}
+
+.newsTitle.ng-enter, .newsTitle.ng-leave {
+  -webkit-transition:1s linear all;
+  transition:1s linear all;
+}
+ 
+.newsTitle.ng-enter { -webkit-transform: translateY(1.5em); height: 0; overflow:hidden;}        /* starting animations for enter */
+.newsTitle.ng-enter-active { -webkit-transform: translateY(0); height: 2em;} /* terminal animations for enter */
+.newsTitle.ng-leave { -webkit-transform: translateY(0);}        /* starting animations for leave */
+.newsTitle.ng-leave-active { -webkit-transform: translateY(-50px); overflow:hidden;  } /* terminal animations for leave */

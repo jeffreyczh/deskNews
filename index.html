@@ -1,0 +1,41 @@
+<html ng-app="deskNewsApp">
+	<head>
+		<meta charset="utf-8">
+		<title>DeskNews</title>
+		<link href="css/index.css" rel="stylesheet">
+		<script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="lib/angular.min.js"></script>
+		<script type="text/javascript" src="lib/angular-animate.min.js"></script>
+		<script type="text/javascript" src="lib/xml2json.min.js"></script>
+		<script type="text/javascript" src="js/controllers.js"></script>
+		<script type="text/javascript" src="js/node-webkitFunc.js"></script>
+	</head>
+	<body>
+		<div ng-controller="weatherCtrl">
+			<span>{{weather.name}}</span>
+			<img alt="{{weather.weather[0].main}}" 
+				ng-src="{{'http://openweathermap.org/img/w/' + weather.weather[0].icon + '.png'}}"
+				title="{{weather.weather[0].description}}">
+			<span>{{(weather.main.temp - 273.15).toFixed(1) + ' ℃'}}</span>
+		</div>
+		<div ng-controller="dateCtrl">
+			<span>{{dateStr}}</span>
+		</div>
+		<hr>
+		<div ng-controller="currencyCtrl">
+			<span>1 CAD</span>
+			<span>{{toCNY}} CNY<img alt="{{CNY_arrow}}" src="{{CNY_arrow}}">
+				  {{toUSD}} USD<img alt="{{USD_arrow}}" src="{{USD_arrow}}"></span>
+		</div>
+		<h1>Top News</h1>
+		<hr>
+		<div ng-controller="topNewsCtrl">
+			<span>
+				<!-- <ul class="titles">
+			        <li ng-repeat="news in topNews">{{news.title}}</li>
+			    </ul> -->
+			    <div ng-repeat="news in newsList" class="newsTitle" ng-click="openLink(news.link)">{{news.title}}</div>
+			</span>
+		</div>
+	</body>
+</html>

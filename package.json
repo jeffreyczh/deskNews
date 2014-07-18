@@ -1,0 +1,13 @@
+{
+	"name": "DeskNews",
+	"main": "index.html",
+	"window": {
+		"toolbar": false,
+		"frame": false,
+		"title": "DeskNews",
+		"min_width": 370,
+		"min_height": 125,
+		"width": 390,
+		"height": 125
+	}
+}
