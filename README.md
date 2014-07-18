@@ -42,7 +42,7 @@ Note: on Windows, you can drag the `deskNews.nw` to `nw.exe` to open it.
 
 Linux:
 
-    cat ./nw deskNews.nw > deskNews && chmod +x deskNews##About the data
+    cat ./nw deskNews.nw > deskNews && chmod +x deskNews
     
 Then, copy the `nw.pak` file from the **Node-Webkit** prebuild library to the folder where the new `deskNews` is in.
 
