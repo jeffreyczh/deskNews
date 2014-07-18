@@ -3,7 +3,7 @@ deskNews
 
 A simple and lightweight cross-platform desktop app that shows news as well as another information e.g. weather, date and currency rate.
 
-![Screenshot](/screenshot/screenshot.gif"Screenshot")
+![Screenshot](/screenshot/screenshot.gif "Screenshot")
 
 
 ##Applied Techniques
